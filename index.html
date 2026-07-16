@@ -5,30 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItI project</title>
 </head>
-<body>
-    <h1>Welcome to My ITI Project</h1>
+<style>/* --- كل سلكتور بتنسيق البنفسج --- */
 
-<hr>
+#id_selector01 {
+    height: 80px; width: 200px;
+    border: 3px solid #333;
+    background-color: Indigo; /* بنفسجي غامق */
+    color: white;
+    position: fixed;
+    top: 20px; right: 20px;
+    padding: 10px;
+}
 
-<h2>About Me</h2>
-<p>Hello, my name is Shahd Saad. I am currently a student, and I am excited to share my progress in this web development course.</p>
+#id_selector02 {
+    height: 80px; width: 200px;
+    border: 3px solid #333;
+    background-color: BlueViolet; /* بنفسجي متوسط */
+    color: white;
+    position: relative;
+    top: 20px; left: 20px;
+    padding: 10px;
+}
 
-<h2>My Journey</h2>
-<p>I am learning the fundamentals of web development. This page is a simple start to practice my HTML tags and structure.</p>
+#id_selector03 {
+    height: 80px; width: 200px;
+    border: 3px solid #333;
+    background-color: MediumPurple; /* بنفسجي فاتح */
+    color: white;
+    position: absolute;
+    bottom: 50px; right: 50px;
+    padding: 10px;
+}
 
-<h2>What I am Learning</h2>
-<p>Currently, I am focusing on:</p>
-<ul>
-    <li>HTML Structure</li>
-    <li>Git and GitHub for version control</li>
-    <li>Collaborating with my instructors</li>
-</ul>
+#id_selector04 {
+    height: 80px; width: 200px;
+    border: 3px solid #333;
+    background-color: Plum; /* بنفسجي فاتح جداً */
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
 
-<hr>
-<p>Thank you for visiting my page!</p>
+/* --- الحاوية (Container) --- */
+.ele__pos_container {
+    border: 2px solid #333;
+    background-color: Lavender; /* خلفية بنفسجية هادئة جداً للحاوية */
+    padding: 20px;
+    margin-top: 50px;
+    height: 500px;
+}
+/* --- الـ CSS للـ ele__pos بتدرجات البنفسجي --- */
 
-    
+.ele__pos01 { 
+    background: MediumPurple; 
+    color: white;
+    border: 1px solid black; 
+    margin: 10px; 
+    padding: 10px; 
+}
+
+.ele__pos02 { 
+    background: BlueViolet; 
+    color: white;
+    border: 1px solid black; 
+    margin: 10px; 
+    padding: 10px; 
+}
+
+.ele__pos03 { 
+    background: Indigo; 
+    color: white;
+    border: 1px solid black; 
+    margin: 10px; 
+    padding: 10px; 
+}
 
 
+
+
+</style>
+    <body>
+    <h1>Welcome to My Flower Project</h1>
+    <h2 style="border: 1px solid rgb(255, 0, 144); display: inline;">About Roses</h2>
+    <h3 style="background: rgb(197, 127, 213); border: 1px solid red; display: inline;">My Garden</h3>
+    <h4 style="border: 1px solid rgb(247, 141, 203);">Flower Types</h4>
+    <h5 style="text-align: center;">Positioning Demo</h5>
+    <h6 style="border: 1px solid rgb(234, 68, 156);">Enjoy the Beauty!</h6>
+
+    <hr>
+
+    <div id="id_selector01"><h3>Rose</h3><p>رمز الحب والجمال</p></div>
+    <div id="id_selector02"><h3>Lily</h3><p>عطر الطبيعة الفواح</p></div>
+    <div id="id_selector03"><h3>Tulip</h3><p>ألوان زاهية ومتنوعة</p></div>
+    <div id="id_selector04"><h3>Jasmin</h3><p>زهرة رقيقة وعطرة</p></div>
+
+    <hr>
+
+    <div class="ele__pos_container">
+        Container
+        <div class="ele__pos01">Testing the element position</div>
+        <div class="ele__pos02">Testing the element position</div>
+        <div class="ele__pos03">Testing the element position</div>
+    </div>
 </body>
 </html>
