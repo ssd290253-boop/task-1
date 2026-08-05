@@ -3,110 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ItI project</title>
+    <title>ItI Flower Project</title>
+    <style>
+        /* تنسيقات عامة وخلفية هادئة */
+        body {
+            background-color: #f7f2fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding-top: 70px; /* مسافة عشان الـ Navbar الثابت ما يغطيقش المحتوى */
+            color: #4a2e5d;
+        }
+
+        /* 1. الناف بار الثابت */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #6a359c;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #e0b0ff;
+        }
+
+        /* الهيدر والعناوين */
+        .header-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #5b247a;
+        }
+
+        /* 2. تصميم الـ 4 كروت للصور */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border: 2px solid #d4b5f0;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(106, 53, 156, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(106, 53, 156, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            color: #6a359c;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* حاوية التست القديمة (Positioning Demo) */
+        .ele__pos_container {
+            border: 2px solid #b19cd9;
+            background-color: #ede2f8; 
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            height: 300px;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .ele__pos01, .ele__pos02, .ele__pos03 {
+            color: white;
+            border: 1px solid black; 
+            margin: 10px; 
+            padding: 10px; 
+            border-radius: 5px;
+        }
+        .ele__pos01 { background: #9b59b6; }
+        .ele__pos02 { background: #8e44ad; }
+        .ele__pos03 { background: #6c3483; }
+
+        /* 3. الفوتر الأنيق */
+        .footer {
+            background-color: #4a2e5d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-<style>
+<body>
 
-#id_selector01 {
-    height: 80px; width: 200px;
-    border: 3px solid #333;
-    background-color: Indigo; 
-    color: white;
-    position: fixed;
-    top: 20px; right: 20px;
-    padding: 10px;
-}
+    <!-- الناف بار الثابت -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#cards">Flowers Gallery</a>
+        <a href="#demo">Position Demo</a>
+        <a href="#about">About</a>
+    </nav>
 
-#id_selector02 {
-    height: 80px; width: 200px;
-    border: 3px solid #333;
-    background-color: BlueViolet; 
-    color: white;
-    position: relative;
-    top: 20px; left: 20px;
-    padding: 10px;
-}
+    <div class="header-content">
+        <h1>Welcome to My Flower Project</h1>
+        <p>استمتعي بجمال الطبيعة وعالم الورود الساحر</p>
+    </div>
 
-#id_selector03 {
-    height: 80px; width: 200px;
-    border: 3px solid #333;
-    background-color: MediumPurple; 
-    color: white;
-    position: absolute;
-    bottom: 50px; right: 50px;
-    padding: 10px;
-}
+    <hr style="border: 0.5px solid #d4b5f0; width: 80%;">
 
-#id_selector04 {
-    height: 80px; width: 200px;
-    border: 3px solid #333;
-    background-color: Plum; 
-    position: sticky;
-    top: 0;
-    padding: 10px;
-}
+    <!-- قسم الكروت الأربعة للصور -->
+    <h2 style="text-align: center; color: #6a359c;" id="cards">Flower Cards</h2>
+    <div class="cards-container">
+        <!-- الكارت الأول - صورة المشروع الأساسية -->
+        <div class="card">
+            <img src="photo.jpg" alt="Rose">
+            <h3>Rose</h3>
+            <p>رمز الحب والجمال الساحر</p>
+        </div>
+        <!-- الكارت الثاني -->
+        <div class="card">
+            <img src="images (1).jfif" alt="Lily">
+            <h3>Lily</h3>
+            <p>عطر الطبيعة الفواح والهادئ</p>
+        </div>
+        <!-- الكارت الثالث -->
+        <div class="card">
+            <img src="images (2).jfif" alt="Tulip">
+            <h3>Tulip</h3>
+            <p>ألوان زاهية ومبهجة للعين</p>
+        </div>
+        <!-- الكارت الرابع -->
+        <div class="card">
+            <img src="images (3).jfif" alt="Jasmin">
+            <h3>Jasmin</h3>
+            <p>زهرة رقيقة وعطرة ومميزة</p>
+        </div>
+    </div>
 
-
-.ele__pos_container {
-    border: 2px solid #333;
-    background-color: Lavender; 
-    padding: 20px;
-    margin-top: 50px;
-    height: 500px;
-}
-
-
-.ele__pos01 { 
-    background: MediumPurple; 
-    color: white;
-    border: 1px solid black; 
-    margin: 10px; 
-    padding: 10px; 
-}
-
-.ele__pos02 { 
-    background: BlueViolet; 
-    color: white;
-    border: 1px solid black; 
-    margin: 10px; 
-    padding: 10px; 
-}
-
-.ele__pos03 { 
-    background: Indigo; 
-    color: white;
-    border: 1px solid black; 
-    margin: 10px; 
-    padding: 10px; 
-}
-
-
-
-
-</style>
-    <body>
-    <h1>Welcome to My Flower Project</h1>
-    <img src="photo.jpg" alt="my flower photo">
-    <h2 style="border: 1px solid rgb(255, 0, 144); display: inline;">About Roses</h2>
-    <h3 style="background: rgb(197, 127, 213); border: 1px solid red; display: inline;">My Garden</h3>
-    <h4 style="border: 1px solid rgb(247, 141, 203);">Flower Types</h4>
-    <h5 style="text-align: center;">Positioning Demo</h5>
-    <h6 style="border: 1px solid rgb(234, 68, 156);">Enjoy the Beauty!</h6>
-
-    <hr>
-
-    <div id="id_selector01"><h3>Rose</h3><p>رمز الحب والجمال</p></div>
-    <div id="id_selector02"><h3>Lily</h3><p>عطر الطبيعة الفواح</p></div>
-    <div id="id_selector03"><h3>Tulip</h3><p>ألوان زاهية ومتنوعة</p></div>
-    <div id="id_selector04"><h3>Jasmin</h3><p>زهرة رقيقة وعطرة</p></div>
-
-    <hr>
-
-    <div class="ele__pos_container">
-        Container
+    <!-- قسم الـ Positioning Demo الأصلي الخاص بكِ -->
+    <div class="ele__pos_container" id="demo">
+        Container (Positioning Demo)
         <div class="ele__pos01">Testing the element position</div>
         <div class="ele__pos02">Testing the element position</div>
         <div class="ele__pos03">Testing the element position</div>
     </div>
+
+    <!-- الفوتر -->
+    <footer class="footer" id="about">
+        <p>Designed with 💜 for ITI Front-End Project | All Rights Reserved © 2026</p>
+    </footer>
+
 </body>
 </html>
